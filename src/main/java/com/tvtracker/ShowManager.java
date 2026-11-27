@@ -16,9 +16,11 @@ public class ShowManager {
         for (int i = 0; i < shows.size(); i++) {
             if (shows.get(i).getTitle().toLowerCase().equals(title.toLowerCase())) {
                 shows.remove(i);
-                System.out.println("Removed: " + title);
+                IO.println("Removed: " + title);
+                return;
             }
         }
+        IO.println("Show not found");
     }
 
     public ArrayList<Show> getAllShows() {
@@ -28,13 +30,13 @@ public class ShowManager {
     public void findByTitle(String title) {
         int count = 0;
         for (int i = 0; i < shows.size(); i++) {
-            if (shows.get(i).getTitle().toLowerCase().equals(title.toLowerCase())) {
-                System.out.println(shows.get(i).toString());
+            if (shows.get(i).getTitle().toLowerCase().startsWith(title.toLowerCase())) {
+                IO.println(shows.get(i).toString());
                 count += 1;
             }
         }
         if (count == 0) {
-            System.out.println("No Shows");
+            IO.println("Show not found");
         }
     }
 
@@ -42,7 +44,7 @@ public class ShowManager {
         for (int i = 0; i < shows.size(); i++) {
             if (shows.get(i).getTitle().toLowerCase().equals(title.toLowerCase())) {
                 shows.get(i).setSeason(season);
-                System.out.println("Changed Season For " + title);
+                IO.println("Changed Season For " + title);
             }
         }
     }
@@ -51,7 +53,7 @@ public class ShowManager {
         for (int i = 0; i < shows.size(); i++) {
             if (shows.get(i).getTitle().toLowerCase().equals(title.toLowerCase())) {
                 shows.get(i).setEpisode(episode);
-                System.out.println("Changed Episode For " + title);
+                IO.println("Changed Episode For " + title);
             }
         }
     }
@@ -60,7 +62,7 @@ public class ShowManager {
         for (int i = 0; i < shows.size(); i++) {
             if (shows.get(i).getTitle().toLowerCase().equals(title.toLowerCase())) {
                 shows.get(i).setRating(rating);
-                System.out.println("Changed Rating For " + title);
+                IO.println("Changed Rating For " + title);
             }
         }
     }
@@ -69,7 +71,7 @@ public class ShowManager {
         for (int i = 0; i < shows.size(); i++) {
             if (shows.get(i).getTitle().toLowerCase().equals(title.toLowerCase())) {
                 shows.get(i).setNotes(notes);
-                System.out.println("Changed Notes For " + title);
+                IO.println("Changed Notes For " + title);
             }
         }
     }
