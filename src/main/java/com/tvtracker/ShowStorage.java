@@ -3,9 +3,11 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
+// A class that stores all of the created shows
 public class ShowStorage {
     private static final String FILE_NAME = "shows.txt";
 
+    // Stores all the shows in a .txt file when exiting
     public static void save(ShowManager manager) {
         try {
             PrintWriter writer = new PrintWriter(FILE_NAME);
@@ -19,6 +21,7 @@ public class ShowStorage {
         }
     }
 
+    // Loads the shows when running the program again
     public static void load(ShowManager manager) {
         File file = new File(FILE_NAME);
 

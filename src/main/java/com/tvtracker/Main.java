@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+// A class that runs the program
 public class Main {
     public static void main(String[] args) {
         ShowManager manager = new ShowManager();
@@ -7,8 +8,10 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
+        // Starting line when the program is ran
         IO.println("Show Tracker - type \"help\" for commands");
 
+        // Takes in commands until quit is typed
         while (true) { 
             IO.print("> ");
             String line = scanner.nextLine();
@@ -29,6 +32,7 @@ public class Main {
                 parts[i] = parts[i].trim();
             }
 
+            // All the command logic
             try {
                 if (command.equals("add")) {
                     if (parts.length < 5) {
