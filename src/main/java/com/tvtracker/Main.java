@@ -98,11 +98,11 @@ public class Main {
                 } else if (command.equals("help")) {
                     IO.println("Commands:");
                     IO.println("    add, Title, Season, Episode, Rating, Notes - Adds a new show");
-                    IO.println("    list - Lists all shows");
+                    IO.println("    list - Lists All Shows");
                     IO.println("    find, Title - Finds all shows starting with Title");
                     IO.println("    remove, Title - Removes a show");
                     IO.println("    ep, Title, Episode - Updates a shows episode");
-                    IO.println("    season, Title season - Updates a shows season");
+                    IO.println("    season, Title, Season - Updates a shows season");
                     IO.println("    rate, Title, Rating - Updates a shows rating");
                     IO.println("    note, Title, Notes - Updates a shows notes");
                     IO.println("    quit - Exits the program");
